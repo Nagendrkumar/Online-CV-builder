@@ -1,0 +1,92 @@
+ul.nobullet {
+	list-style: none;
+}
+ul.disc {
+	list-style: disc;
+	margin-left: 0px;
+	padding-left: 20px;
+}
+ul.circle {
+	list-style: circle;
+	margin-left: 0px;
+	padding-left: 20px;
+}
+ul.square {
+	list-style: square;
+	margin-left: 0px;
+	padding-left: 20px;
+}
+ul.dash {
+	list-style: none;
+	padding-left: 0px;
+	margin-left: 0px;
+}
+ul.dash li {
+	padding-left: 20px;
+	text-indent: -1em;
+}
+ul.dash li:before {
+	content: "-";
+	padding-right: 10px;
+}
+ul.decimal {
+	list-style: decimal;
+	margin-left: 0px;
+	padding-left: 20px;
+}
+
+.toggle-button {
+	display: inline-block;
+	margin-top: 1rem;
+}
+.toggle-option {
+	display: inline-block;
+	padding: 2px;
+	padding-left: 7px;
+	padding-right: 7px;
+	cursor: pointer;
+	border-radius: 1.5px;
+}
+.toggle-option {
+	background-color: #222;
+}
+.toggle-option.selected {
+	background-color: #995431; 
+	 background-color: #fdfdfd; 
+	background-color: #11a843;
+}
+
+.custom-button {
+	display: inline-block;
+	padding: 3px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	cursor: pointer;
+	border-radius: 2px;
+}
+.custom-button {
+	background-color: #c781e3;
+}
+.custom-button.selected {
+	background-color: #c61805;
+}
+.btn-group {
+	display: inline-block;
+	padding: 3px;
+	padding-top: 0px;
+	padding-bottom: 1px;
+	cursor: pointer;
+	border-radius: 2px;
+}
+.btn {
+	background-color: #0a69b6;
+}
+.btn-purple {
+	background-color: #690b59;
+}
+kbd {
+	padding: 0;
+	padding-left: 3px;
+	padding-right: 3px;
+	background-color: #666;
+}

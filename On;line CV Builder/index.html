@@ -1,0 +1,395 @@
+<html>
+<head>
+	<title>Resume Builder</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="css/column_scroll.css">
+	<link href='https://fonts.googleapis.com/css?family=Amarante' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="css/thin_scroll.css">
+	<link rel="stylesheet" type="text/css" href="css/theme.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<meta name="description" content="Online document editor like interface to create and save Resume">
+	<meta name="keywords" content="resume,cv,maker,creator,generator">
+</head>
+
+<body>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-3 no-print" id="left">
+			<div id="panel">
+					<h3 class="text-center" data-toggle="modal">CV generator by Nagendrakumar</h3>
+
+					<section class="contact">
+                        <h4>Contact</h4>
+                        <ul>
+                           
+                            <li>
+                                <p><i class="fa fa-mobile" title="Email"></i> <a href="mailto:xyz@xyz.site">kumarnnagendra760@gmail.com</a></p>
+                            </li>
+                            <li>
+                                <p><i class="fas fa-at" title="Website"></i> <a href="https://www.instagram.com/_nagen_dra_kumar/"> Instagram</a></p>
+                            </li>
+                            <li>
+                                <p><i class="fab fa-dribbble" title="GitHub"></i> <a href="https://github.com/Nagendrkumar">github.com</a></p>
+                            </li>
+                        </ul>
+
+				<button class="btn btn-block btn-success" onclick="window.print()">PRINT OR SAVE AS PDF</button>
+
+				<hr>
+
+				<h4 class="text-center"><strong>Template settings</strong></h4>
+                <br>
+				<h5>
+					<strong> <u>Horizontal margin1:-</u></strong>
+					<div class="toggle-button">
+						<div class="toggle-option" data-toggle="margin" id="margin1">1</div>
+						<div class="toggle-option" data-toggle="margin" id="margin2">2</div>
+						<div class="toggle-option" data-toggle="margin" id="margin3">3</div>
+						<div class="toggle-option selected" data-toggle="margin" id="margin4">4</div>
+					</div>
+				</h5>
+				<h5>
+					<strong> <u>Line spacing:-</u></strong>  
+					<div class="toggle-button">
+						<div class="toggle-option" data-toggle="line" id="line1">1</div>
+						<div class="toggle-option" data-toggle="line" id="line2">2</div>
+						<div class="toggle-option" data-toggle="line" id="line3">3</div>
+						<div class="toggle-option selected" data-toggle="line" id="line4">4</div>
+					</div>
+				</h5>
+				
+				<br>
+
+					<h5>
+						<strong> <u>Font type:-</u></strong>
+						<div class="toggle-button">
+							<div class="toggle-option" data-toggle="font" id="fontVerdanaSans">Arial</div>
+							<div class="toggle-option selected" data-toggle="font" id="fontMonospace">Monospace</div>
+							<div class="toggle-option" data-toggle="font" id="fontRoboto">Roboto</div>
+							<div class="toggle-option" data-toggle="font" id="fontDroid">Droid</div>
+						</div>
+					</h5>
+					<h5>
+						<strong> <u>Title case:-</u></strong>
+						<div class="toggle-button">
+							<div class="toggle-option selected" data-toggle="case" id="caseNormal">Default</div>
+							<div class="toggle-option" data-toggle="case" id="caseUpper">Uppercase</div>
+						</div>
+					</h5>
+					<h5>
+						<strong> <u>Title style:-</u></strong>
+						<div class="toggle-button">
+							<div class="toggle-option selected" data-toggle="title" id="titleRuled">Ruled</div>
+							<div class="toggle-option" data-toggle="title" id="titleShaded">Shaded</div>
+						</div>
+					</h5>
+					<h5>
+						<strong> <u>Title rule position:-</u></strong>
+						<div class="toggle-button">
+							<div class="toggle-option selected" data-toggle="rule" id="ruleAbove">Above title</div>
+							<div class="toggle-option" data-toggle="rule" id="ruleBelow">Below title</div>
+						</div>
+					</h5>
+					<br>
+					<h5>
+						<strong> <u>Projects layout:-</u></strong>						
+						<div class="toggle-button">
+							<div class="toggle-option selected" data-toggle="projects" id="projects1">L1</div>
+							<div class="toggle-option" data-toggle="projects" id="projects2">L2</div>
+						</div>
+					</h5>
+					<br>
+				
+				<h4 class="text-center"><strong>Lists and points</strong></h4>
+				<button class="btn btn-block btn-xs btn-success" onclick="insertList();">+ Insert sub-list</button>
+				<button class="btn btn-block btn-xs btn-warning" onclick="decreaseIndent();">&lt;&lt; Decrese indentation</button>
+				<button class="btn btn-block btn-xs btn-warning" onclick="increaseIndent();">&gt;&gt; Increase indentation</button>
+				<h5>
+					List style :
+					<div class="toggle-button">
+						<button class="btn btn-xs custom-button" onclick="changeListStyle('disc');">&#9899;</button>
+						<button class="btn btn-xs custom-button" onclick="changeListStyle('circle');">&#9898;</button>
+						<button class="btn btn-xs custom-button" onclick="changeListStyle('square');">&#9632;</button>
+						<button class="btn btn-xs custom-button" onclick="changeListStyle('dash');">-</button>
+						<button class="btn btn-xs custom-button" onclick="changeListStyle('decimal');">1.</button>
+					</div>
+				</h5>
+			</div>
+			</div>
+			
+
+		<div class="col-sm-9 text-center" id="right">
+
+			<div id="page" class="droid">
+
+				<div class="row" style="margin-bottom:10px;">
+				<div class="col-sm-8">
+					<div id="info" style="padding-top:50px; padding-bottom: 0px;">
+						<p id="contentName" style=" font-size: 50px;">Abc xyz</p>
+					</div>
+                    </div>
+                    <div class="col-sm-4" style="text-align: right;padding-top: 40px; padding-bottom: 0px;">
+						<p>+91-9999999999</p>
+                            <p style="margin-top:-10px"><span id="contactLink1">xyzabc@hotmail.com</span>
+                            <p style="margin-top:-10px; margin-bottom: 0px;"><span id="contactLink2">xyzabc.github.io</span></p>
+				</div>
+				</div>
+
+
+				<div class="section" id="sectionEducation">
+					<div class="section-title ruled rule-above">
+						<hr class="hr-above">
+						<h4><strong>Education</strong></h4>
+						<hr class="hr-below">
+					</div>
+					<ul class="nobullet">
+					<li>
+                        <div class="text"><strong>B.E - Computer Science and Engineering,</strong> Sathyabama institute of science & technology </div>
+                        <div class="text">Aggregate CGPA:- <strong>/10</strong><br>Expected Graduation:- <strong>MAY,2024</strong></div>
+                        <br>
+                        <div class="text"><strong>12th Intermediate - MPC,</strong> Board of Secondary Education,Andhra Pradesh</div>
+                        <div class="text">Aggregate Percentage:- <strong>85%</strong><br>Passed: <strong>APRIL, 2020</strong></div>
+                        <br>
+                        <div class="text"><strong>10th High School,</strong> Board of Primary Education, Andhra Pradesh</div>
+                        <div class="text">Aggregate Percentage:- <strong>97%</strong><br>Passed: <strong>APRIL,2018</strong></div>
+					</li>
+					</ul>
+				</div>
+
+
+				<div class="section" id="sectionExperience">
+					<div class="section-title ruled rule-above">
+						<hr class="hr-above">
+						<h4><strong>Experience</strong></h4>
+						<hr class="hr-below">
+					</div>
+					<ul>
+					<li>
+						<div class="text"><strong>Software Engineering Intern,</strong> Macoworks,Hyd </div>
+                        <div class="text">MAY 2020 - JULY 2021</div>
+                        <div class="text">used swift to develop a productivity app for ios for architects render and edit blueprints etc.<br>
+							Fixed bugs in existing app, contributing to an overall 20% reduction in customers complaints
+						</div>
+					</li>
+					<li>
+						<div class="text"><strong>Other experiences</strong> Company name, place</div>
+                        <div class="text">startmonth 2020 - end 2021</div>
+                        <div class="text">Point 1<br>Point 2</div>
+                    </li>
+					</ul>
+				</div>
+
+
+				<div class="section" id="sectionProjects">
+					<div class="section-title ruled rule-above">
+						<hr class="hr-above">
+						<h4><strong>Projects</strong></h4>
+						<hr class="hr-below">
+					</div>
+					<ul>
+					<li>
+						<div>
+						<div class="title">Project title</div>
+						<div class="time right">Ongoing</div>
+						</div>
+						<div>
+						<div class="mentor tab">Project Mentor</div>
+						</div>
+						<div>
+						<div class="text">Graphical interface for a website </div>
+						</div>
+					</li>
+					<li>
+						<div>
+						<div class="title">Project title</div>
+						<div class="time right">Apr 2016</div>
+						</div>
+						<div>
+						<div class="mentor tab">Dr. XY, Associate Professor, Your dept name , institute name</div>
+						<div class="link right">link of of your project</div>
+						</div>
+						<div>
+						<div class="text">Graphical interface for a website.</div>
+						</div>
+					</li>
+					<li>
+						<div>
+						<div class="title">Project title</div>
+						<div class="time right">Jan 2016 - Mar 2016</div>
+						</div>
+						<div>
+						<div class="mentor tab">Mentor name</div>
+						<div class="link right">www.xyz.in</div>
+						</div>
+						<div>
+						<div class="text">Graphical interface for a website</div>
+						</div>
+					</li>
+					<li>
+						<div>
+						<div class="title">Project title</div>
+						<div class="time right">Feb 2016</div>
+						</div>
+						<div>
+						<div class="link right">goo.gl/link</div>
+						</div>
+						<div>
+						<div class="text">Graphical interface for a website</div>
+						</div>
+					</li>
+					</ul>
+				</div>
+
+
+				<div class="section" id="sectionSkills">
+					<div class="section-title ruled rule-above">
+						<hr class="hr-above">
+						<h4><strong>Technical skills</strong></h4>
+						<hr class="hr-below">
+					</div>
+					<ul>
+					<li>
+						<strong><span class="skillCategory">Programming languages</span> :</strong>
+						C++, Python, Java 
+					</li>
+					<li>
+						<strong><span class="skillCategory">Web technologies</span> :</strong>
+						HTML, CSS, Javascript
+					</li>
+					<li>
+						<strong><span class="skillCategory">Database management</span> :</strong>
+						mySQL
+					</li>
+					<li>
+						<strong><span class="skillCategory">Miscellaneous</span> :</strong>
+						Android programming *
+					</li>
+					<li>
+						<strong><span class="skillCategory">Operating system</span> :</strong>
+						Windows, Linux
+					</li>
+					<div class="star"><i>*<span class="light"> Elementary proficiency</span></i></div>
+					</ul>
+				</div>
+
+				<div class="section" id="sectionAchievements">
+					<div class="section-title ruled rule-above">
+						<hr class="hr-above">
+						<h4><strong>Achievements</strong></h4>
+						<hr class="hr-below">
+					</div>
+					<ul>
+					<li>
+						<span class="title">ABC contest 2022 : </span>
+						<span class="text">Secured 1st position in the National level contest.</span>
+					</li>
+					<li>
+						<span class="title">Hacker Rank </span>
+						<span class="text">Secured All India Rank 7 among all the candidates appeard for the contest</span>
+					</li>
+					<li>
+						<span class="title">other Achievements</span>
+						<span class="text">Mention it </span>
+					</li>
+					<li>
+						<span class="title">other Achievement </span>
+						<span class="text">mention it</span>
+						<ul class="decimal">
+							<li>mention it</li>
+							<li>mention it</li>
+						</ul>
+					</li>
+					</ul>
+				</div>
+
+
+				<div class="section" id="sectionCourses">
+					<div class="section-title ruled rule-above">
+						<hr class="hr-above">
+						<h4><strong>Key courses taken</strong></h4>
+						<hr class="hr-below">
+					</div>
+					<ul>
+					<div class="row">
+						<div class="col-sm-6">
+							<li>coding</li>
+							<li>computer graphics</li>
+							<li>database management</li>
+						</div>
+						<div class="col-sm-6">
+							<li>cloud computing</li>
+							<li>ABC architecture </li>
+							<li>ABC lab </li>
+						</div>
+					</div>
+					<div class="star"><i>*<span class="light"> To be completed in Nov 2023</span></i></div>
+					</ul>
+				</div>
+
+                <div class="section" id="sectionlinks">
+                    <div class="section-title ruled rule-above">
+                        <hr class="hr-above">
+                        <h4><strong>Links</strong></h4>
+                        <hr class="hr-below">
+                    </div>
+                    <ul>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <li>GitHub://xyz</li>
+                            <li>Linkedin://xyz</li>
+                            <li>Instagram://xyz</li>
+                        </div>
+                        <div class="col-sm-6">
+                            <li>CodeChef://xyz</li>
+                            <li>HackerRank://xyz</li>
+                            <li>Web-Page://xyz.your website.io</li>
+                        </div>
+                        </div>
+                    </ul>
+                </div>
+
+				<div class="section" id="sectionCurricular">
+					<div class="section-title ruled rule-above">
+						<hr class="hr-above">
+						<h4><strong>Hobbies</strong></h4>
+						<hr class="hr-below">
+					</div>
+					<ul>
+					<li>Photography</li>
+					<li>Watching Movies</li>
+					<li>VIDEO EDITING</li>
+					<li>WATCHING STANDUP COMEDY</li>
+					</ul>
+				</div>
+
+				<div class="section" id="sectionCurricular">
+					<div class="section-title ruled rule-above">
+						<hr class="hr-above">
+						<h4><strong>Field of Interset</strong></h4>
+						<hr class="hr-below">
+					</div>
+					<ul>
+					<li>Robotics</li>
+					<li>AR & VR</li>
+					<li>Cinematogrpahy</li>
+					<li>Mention it </li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>
